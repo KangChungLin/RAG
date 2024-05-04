@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  app:
+    build:
+      dockerfile: Dockerfile
+    container_name: rag
+    restart: always
+    ports:
+      - 8000:80
+    links:
+      - postgres
+  postgres:
+    image: ankane/pgvector
+    restart: always
+    container_name: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD: example

@@ -6,3 +6,6 @@
 
 ### RAG系統API
 連線到http://127.0.0.1:8000/docs
+
+### 架構圖
+![image](https://github.com/KangChungLin/RAG/blob/main/RAG.png)
